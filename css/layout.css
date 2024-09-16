@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.row, .row-reverse, .column, .column-reverse {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-33 {
+  width: 33%;
+}
+
+.col-25 {
+  width: 25%;
+}

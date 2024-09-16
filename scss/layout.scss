@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.row, .row-reverse, .column, .column-reverse {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+// Prevents size to be bigger than 1200px for container, to prevent scaling getting too huge
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Columns
+// 1 column element
+.col-100 {
+    width: 100%;
+}
+
+// 2 columns element
+.col-50 {
+    width: 50%;
+}
+
+// 3 columns element
+.col-33 {
+    width: 33%;
+}
+
+// 4 columns element
+.col-25 {
+    width: 25%;
+}

@@ -1,0 +1,50 @@
+@import url(style.css);
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--white);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+header nav > a {
+  font-size: 1.5em;
+}
+header a {
+  font-weight: 700;
+  color: var(--color-main);
+}
+header div {
+  align-items: center;
+}
+header div a {
+  margin: auto 10px;
+}
+
+.landing {
+  position: relative;
+}
+.landing div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 0px;
+  bottom: 0px;
+  margin: 4em 6em;
+}
+.landing p {
+  font-size: 2em;
+  margin: 0;
+  color: var(--color-main-reverse);
+  margin-bottom: 20px;
+}
+.landing p > em {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: normal;
+}

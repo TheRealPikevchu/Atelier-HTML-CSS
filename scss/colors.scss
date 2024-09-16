@@ -1,0 +1,36 @@
+// Colors definition
+:root{
+    // named colors
+    --black: #1c2125;
+    --lime: #d5f31f;
+    --white: #ffffff;
+    --green: #029d5b;
+    --teal: #053b45;
+    --lightgrey: #f4f6f5;
+
+    // reference colors
+    --color-main: var(--black);
+    --color-primary: var(--green);
+    --color-secondary: var(--lime);
+    --color-background: var(--teal);
+
+    --color-main-reverse: var(--white);
+}
+
+body {
+    color: var(--color-main);
+
+    background-color: var(--color-background);
+}
+
+.text-color--primary {
+    color: var(--color-primary);
+}
+
+.text-color--primary-dark {
+    color: darken(var(--green), 10%);
+}
+
+.background--light {
+    background-color: var(--white);
+}

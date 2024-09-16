@@ -1,0 +1,63 @@
+@import url(style.css);
+
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--white);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+
+    nav > a {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-weight: 700;
+        color: var(--color-main);
+    }
+
+    div {
+        align-items: center;
+    }
+
+    div {
+        a {
+            margin: auto 10px;
+        }
+    }
+}
+
+.landing {
+
+    position: relative;
+
+    div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        right: 0px;
+        bottom: 0px;
+        margin: 4em 6em;
+    }
+
+    p {
+        font-size: 2em;
+        margin: 0;
+        color: var(--color-main-reverse);
+        margin-bottom: 20px;
+    }
+
+    p > em {
+        font-size: 1.5em;
+        font-weight: 700;
+        font-style: normal;
+    }
+}

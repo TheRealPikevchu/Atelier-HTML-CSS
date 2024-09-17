@@ -67,6 +67,12 @@ header div a {
 }
 .team > h3 {
   margin: 0 3em;
+  max-width: var(--max-width);
+}
+@media screen and (min-width: 1200px) {
+  .team > h3 {
+    margin: 0 auto;
+  }
 }
 .team > div {
   margin: 4em auto;
@@ -83,5 +89,19 @@ header div a {
 .team p {
   margin: 0 auto;
   max-width: 12em;
+  font-size: smaller;
   color: var(--color-main--light);
+}
+
+.statistics {
+  margin: 3em 6em;
+}
+.statistics h2 {
+  margin: 0.25em auto;
+}
+.statistics p {
+  margin: 0 auto;
+  color: var(--color-main-reverse);
+  font-size: larger;
+  font-weight: bolder;
 }

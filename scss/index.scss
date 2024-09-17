@@ -54,6 +54,22 @@ header {
     width: 100%;
     margin: 0;
 
+    // ? Why can't I do it like this ? (big size horizontal scroll)
+    // @media screen and (min-width: 1200px) {
+    //     height: 100vh;
+    //     width: 100vw;
+
+    //     // ? Why is this required ?
+    //     box-sizing: border-box;
+    //     overflow-x: hidden;
+    //     overflow-y: hidden;
+
+    //     img {
+    //         object-fit: cover;
+    //         height: 100%;
+    //     }
+    // }
+
     img {
         width: 100%;
     }
@@ -82,6 +98,13 @@ header {
 
     &>h3 {
         margin: 0 3em;
+        max-width: var(--max-width);
+    }
+
+    @media screen and (min-width: 1200px) {
+        &>h3 {
+            margin: 0 auto;
+        }
     }
 
     &>div {
@@ -103,6 +126,23 @@ header {
     p {
         margin: 0 auto;
         max-width: 12em;
+        font-size: smaller;
         color: var(--color-main--light);
+    }
+}
+
+.statistics {
+    margin: 3em 6em;
+
+    h2 {
+        margin: 0.25em auto;
+    }
+
+    p {
+        margin: 0 auto;
+
+        color: var(--color-main-reverse);
+        font-size: larger;
+        font-weight: bolder;
     }
 }

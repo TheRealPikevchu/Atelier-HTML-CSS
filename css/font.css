@@ -6,6 +6,22 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1em;
   color: var(--color-main);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  color: var(--color-main);
+}
+h1 > em {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--color-primary);
 }
 
 em {

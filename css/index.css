@@ -24,12 +24,6 @@ header div a {
   margin: auto 10px;
 }
 
-.landing {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
 @media screen and (min-width: 1200px) {
   .landing {
     height: 100vh;
@@ -44,6 +38,11 @@ header div a {
     height: 100%;
   }
 }
+.landing {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
 .landing img {
   width: 100%;
 }
@@ -57,14 +56,32 @@ header div a {
   bottom: 0px;
   margin: 4em 6em;
 }
-.landing p {
-  font-size: 2em;
-  margin: 0;
+.landing h1 {
+  margin: 0 0 20px 0;
   color: var(--color-main-reverse);
-  margin-bottom: 20px;
 }
-.landing p > em {
-  font-size: 1.5em;
-  font-weight: 700;
-  font-style: normal;
+
+.team {
+  background-color: var(--color-main-reverse);
+  padding: 1em 0;
+}
+.team > h3 {
+  margin: 0 3em;
+}
+.team > div {
+  margin: 4em auto;
+}
+.team img {
+  width: 10em;
+  height: 10em;
+  margin: 0 auto;
+  border: 0 none #fff;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team p {
+  margin: 0 auto;
+  max-width: 12em;
+  color: var(--color-main--light);
 }

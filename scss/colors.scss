@@ -15,7 +15,14 @@
     --color-background: var(--teal);
 
     --color-main-reverse: var(--white);
+
+    --color-primary--dark: hsl(from var(--color-primary) h s calc(l - 10));
+    --color-main--light: hsl(from var(--color-main) h s calc(l + 30));
+    // ? Why the following code is not doable ?
+    // --color-primary--dark: #{darken(var(--color-primary), 10%)};
+    // --color-main--light: #{lighten(var(--color-main), 30%)};
 }
+
 
 body {
     color: var(--color-main);
@@ -28,7 +35,7 @@ body {
 }
 
 .text-color--primary-dark {
-    color: darken(var(--green), 10%);
+    color: var(--color-primary--dark);
 }
 
 .background--light {

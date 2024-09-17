@@ -1,31 +1,32 @@
-/* Colors definition */
-:root{
-     /* named colors */
-    --black: #1c2125;
-    --lime: #d5f31f;
-    --white: #ffffff;
-    --green: #029d5b;
-    --teal: #053b45;
-    --lightgrey: #f4f6f5;
-
-     /* reference colors */
-    --color-main: var(--black);
-    --color-primary: var(--green);
-    --color-secondary: var(--lime);
-    --color-background: var(--teal);
-
-    --color-main-reverse: var(--white);
-
+:root {
+  --black: #1c2125;
+  --lime: #d5f31f;
+  --white: #ffffff;
+  --green: #029d5b;
+  --teal: #053b45;
+  --lightgrey: #f4f6f5;
+  --color-main: var(--black);
+  --color-primary: var(--green);
+  --color-secondary: var(--lime);
+  --color-background: var(--teal);
+  --color-main-reverse: var(--white);
+  --color-primary--dark: hsl(from var(--color-primary) h s calc(l - 10));
+  --color-main--light: hsl(from var(--color-main) h s calc(l + 30));
 }
 
 body {
-  color: #1c2125;
+  color: var(--color-main);
+  background-color: var(--color-background);
 }
 
 .text-color--primary {
-  color: #029d5b;
+  color: var(--color-primary);
 }
 
 .text-color--primary-dark {
-  color: #016b3e;
+  color: var(--color-primary--dark);
+}
+
+.background--light {
+  background-color: var(--white);
 }

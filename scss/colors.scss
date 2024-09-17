@@ -8,16 +8,20 @@
     --teal: #053b45;
     --lightgrey: #f4f6f5;
 
+
     // reference colors
-    --color-main: var(--black);
+    --color-main: var(--white);
     --color-primary: var(--green);
     --color-secondary: var(--lime);
     --color-background: var(--teal);
+    --color-background-highlight: var(--lightgrey);
 
-    --color-main-reverse: var(--white);
+    --color-main--reverse: var(--black);
+    --color-background--reverse: var(--white);
 
     --color-primary--dark: hsl(from var(--color-primary) h s calc(l - 10));
     --color-main--light: hsl(from var(--color-main) h s calc(l + 30));
+    --color-main--reverse--light: hsl(from var(--color-main--reverse) h s calc(l + 30));
     // ? Why the following code is not doable ?
     // --color-primary--dark: #{darken(var(--color-primary), 10%)};
     // --color-main--light: #{lighten(var(--color-main), 30%)};
@@ -26,8 +30,12 @@
 
 body {
     color: var(--color-main);
-
     background-color: var(--color-background);
+}
+
+.light-background {
+    color: var(--color-main--reverse);
+    background-color: var(--color-background--reverse);
 }
 
 .text-color--primary {

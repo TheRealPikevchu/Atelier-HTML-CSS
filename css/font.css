@@ -34,7 +34,12 @@ em {
 }
 
 a {
+  color: var(--color-main);
   text-decoration: none;
+}
+
+.light-background a {
+  color: var(--color-main--reverse);
 }
 
 .text-center {

@@ -1,6 +1,6 @@
 @import url(style.css);
 header {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 100%;
   background-color: var(--white);
@@ -26,14 +26,26 @@ header div a {
 
 .landing {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .landing {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .landing img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
 }
 .landing img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .landing div {
   position: absolute;

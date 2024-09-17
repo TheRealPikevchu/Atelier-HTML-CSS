@@ -9,43 +9,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 2em;
-  color: var(--color-main);
-}
-h1 > em {
-  font-size: 1.5em;
-  font-weight: 700;
-  font-style: normal;
-}
-
-h2 {
-  font-size: 2.5em;
-  color: var(--color-primary);
-}
-h2 > em {
-  font-size: 1.2em;
-  font-weight: 700;
-  font-style: normal;
-}
-
-em {
-  color: var(--color-secondary);
-}
-
-a {
-  color: var(--color-main);
-  text-decoration: none;
-}
-
-.light-background a {
-  color: var(--color-main--reverse);
-}
-
-.text-center {
-  text-align: center;
-}
-
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;

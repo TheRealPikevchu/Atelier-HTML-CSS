@@ -6,6 +6,53 @@ body {
     margin: 0;
 }
 
+section {
+    overflow: auto;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: var(--color-main);
+
+    &>em {
+        font-size: 1.5em;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+h2 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    color: var(--color-secondary);
+
+    &>em {
+        font-size: 1.2em;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.light-background h2 {
+    color: var(--color-primary);
+}
+
+em {
+    color: var(--color-secondary);
+}
+
+a {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+.light-background{
+    a {
+        color: var(--color-main--reverse);
+    }
+}
+
 .row, .row-reverse, .column, .column-reverse {
     display: flex;
     flex-wrap: wrap;

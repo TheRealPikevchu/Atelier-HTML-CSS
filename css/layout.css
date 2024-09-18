@@ -36,7 +36,7 @@ h2 > em {
 }
 
 em {
-  color: var(--color-secondary);
+  color: var(--color-highlight);
 }
 
 a {
@@ -48,9 +48,71 @@ a {
   color: var(--color-main--reverse);
 }
 
-.row, .row-reverse, .column, .column-reverse {
+.cta {
+  font-weight: bold;
+  color: var(--color-background);
+  background-color: var(--color-highlight);
+  min-width: 10em;
+  min-height: 3em;
+  border-radius: 1.5em;
+  border: 0 none transparent;
+  outline: none;
+}
+
+.cta:hover {
+  background-color: var(--color-highlight--dark);
+}
+
+form .col-100 {
+  width: calc(100% - 2em);
+  max-width: var(--max-width);
+}
+form .col-50 {
+  width: calc(50% - 2em);
+}
+form .form__element {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 0;
+  border-bottom: 3px solid var(--color-main);
+}
+form .form__element:has(> :invalid:focus) {
+  border-bottom: 3px solid var(--color-invalid);
+}
+form .form__element:has(> :valid:focus) {
+  border-bottom: 3px solid var(--color-highlight);
+}
+form label {
+  font-size: smaller;
+  align-self: center;
+  text-align: left;
+  width: 5em;
+}
+form input[type=tel],
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form textarea {
+  border: 0 none transparent;
+  outline: none;
+  background-color: var(--color-background);
+  font-family: "Poppins", sans-serif;
+  font-size: larger;
+  color: var(--color-main);
+  flex-grow: 1;
+}
+form label:has(+ textarea) {
+  align-self: flex-start;
+}
+
+.row,
+.row-reverse,
+.column,
+.column-reverse {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .row-reverse {

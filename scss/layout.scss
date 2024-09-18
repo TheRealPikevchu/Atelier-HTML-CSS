@@ -1,4 +1,4 @@
-:root{
+:root {
     --max-width: 1200px;
 }
 
@@ -39,7 +39,7 @@ h2 {
 }
 
 em {
-    color: var(--color-secondary);
+    color: var(--color-highlight);
 }
 
 a {
@@ -47,15 +47,94 @@ a {
     text-decoration: none;
 }
 
-.light-background{
+.light-background {
     a {
         color: var(--color-main--reverse);
     }
 }
 
-.row, .row-reverse, .column, .column-reverse {
+.cta {
+    font-weight: bold;
+    color: var(--color-background);
+
+    background-color: var(--color-highlight);
+
+    min-width: 10em;
+    min-height: 3em;
+    border-radius: 1.5em;
+    border: 0 none transparent;
+    outline: none;
+}
+
+.cta:hover {
+    background-color: var(--color-highlight--dark);
+}
+
+form {
+    $internal-horizontal-margin: 2em;
+
+    .col-100 {
+        width: calc(100% - $internal-horizontal-margin);
+        max-width: var(--max-width);
+    }
+
+    .col-50 {
+        width: calc(50% - $internal-horizontal-margin);
+    }
+
+    .form__element {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 0;
+
+        border-bottom: 3px solid var(--color-main);
+    }
+
+    .form__element:has( > :invalid:focus){
+        border-bottom: 3px solid var(--color-invalid);
+    }
+
+    .form__element:has( > :valid:focus){
+        border-bottom: 3px solid var(--color-highlight);
+    }
+
+    label {
+        font-size: smaller;
+        align-self: center;
+        text-align: left;
+        width: 5em;
+    }
+
+    input[type="tel"],
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        border: 0 none transparent;
+        outline: none;
+        background-color: var(--color-background);
+
+        font-family: "Poppins", sans-serif;
+        font-size: larger;
+        color: var(--color-main);
+
+        flex-grow: 1;
+    }
+
+    label:has(+ textarea) {
+        align-self: flex-start;
+    }
+}
+
+.row,
+.row-reverse,
+.column,
+.column-reverse {
     display: flex;
     flex-wrap: wrap;
+
+    flex-direction: row;
 }
 
 .row-reverse {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
+    
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -21,7 +21,7 @@
                 <a href="#team">Notre équipe</a>
                 <a href="#services">Nos services</a>
                 <a href="#statistics">Témoignages</a>
-                <a href="">Contactez-nous</a>
+                <a href="#contact">Contactez-nous</a>
                 <a href="">Notre galerie</a>
                 </dov>
         </nav>
@@ -36,7 +36,8 @@
         </section>
         <section id="team" class="light-background">
             <h2>Notre équipe</h2>
-            <h3>Deserunt est adipisicing nisi magna irure sint aliqua aliquip consectetur adipisicing eiusmod aute qui est. Culpa commodo veniam ad anim sint exercitation deserunt consequat.</h3>
+            <h3>Deserunt est adipisicing nisi magna irure sint aliqua aliquip consectetur adipisicing eiusmod aute qui
+                est. Culpa commodo veniam ad anim sint exercitation deserunt consequat.</h3>
             <div class="row container">
                 <div class="col-33 column">
                     <img src="images/image 1.jpg" alt="Profil de Julie Dupond">
@@ -91,6 +92,40 @@
                     <h3>Audit qualité</h3>
                 </div>
             </div>
+        </section>
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <h3>Consequat minim ipsum eu aliquip irure aute est esse reprehenderit proident sunt occaecat.</h3>
+            <form method="get" action="" class="container column">
+                <div class="row">
+                    <div class="col-50 form__element row">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="col-50 form__element row">
+                        <label for="category">Catégorie</label>
+                        <!-- TODO : try to turn this into dropdown -->
+                        <input type="text" name="category" id="category">
+                    </div>
+                    <div class="col-50 form__element row">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                    <div class="col-50 form__element row">
+                        <label for="location">Ville</label>
+                        <input type="text" name="location" id="location">
+                    </div>
+                </div>
+                <div class="col-100 form__element row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="col-100 form__element column">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10" spellcheck="true" required></textarea>
+                </div>
+                <input type="submit" value="Envoyer" class="cta">
+            </form>
         </section>
     </main>
     <footer>

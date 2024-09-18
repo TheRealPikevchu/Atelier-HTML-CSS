@@ -5,11 +5,16 @@
   --green: #029d5b;
   --teal: #053b45;
   --lightgrey: #f4f6f5;
+  --red: #c26060;
   --color-main: var(--white);
   --color-primary: var(--green);
   --color-secondary: var(--lime);
   --color-background: var(--teal);
   --color-background-highlight: var(--lightgrey);
+  --color-highlight: var(--lime);
+  --color-highlight--dark: hsl(from var(--color-highlight) h s calc(l - 20));
+  --color-invalid: var(--red);
+  --color-error: var(--red);
   --color-main--reverse: var(--black);
   --color-background--reverse: var(--white);
   --color-primary--dark: hsl(from var(--color-primary) h s calc(l - 10));

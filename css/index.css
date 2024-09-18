@@ -186,3 +186,43 @@ header div a {
   color: var(--color-background);
   font-size: smaller;
 }
+
+#gallery > h3 {
+  margin: 0 3em;
+  max-width: var(--max-width);
+}
+@media screen and (min-width: 1200px) {
+  #gallery > h3 {
+    margin: 0 auto;
+  }
+}
+#gallery .container {
+  padding: 1em 6em;
+}
+#gallery img {
+  margin-top: 1.2em;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+#gallery .icon {
+  width: 2em;
+  border-width: 2px;
+}
+#gallery .icon:hover {
+  background-color: hsl(from var(--color-main) h s calc(l - 10));
+}
+#gallery .icon + .icon {
+  background-color: var(--color-main--reverse);
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
+}
+#gallery .icon + .icon:hover {
+  background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
+}
+
+.gallery__controls {
+  justify-content: space-between;
+  margin-bottom: 2em;
+}

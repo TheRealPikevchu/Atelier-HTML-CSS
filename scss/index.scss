@@ -251,3 +251,53 @@ header {
         }
     }
 }
+
+#gallery {
+    &>h3 {
+        margin: 0 3em;
+        max-width: var(--max-width);
+    }
+
+    @media screen and (min-width: 1200px) {
+        &>h3 {
+            margin: 0 auto;
+        }
+    }
+
+    .container {
+        padding: 1em 6em;
+    }
+
+    img{
+        margin-top: 1.2em;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .icon{
+        width: 2em;
+        border-width: 2px;
+    }
+
+    .icon:hover{
+        background-color: hsl(from var(--color-main) h s calc(l - 10));
+    }
+
+    .icon+.icon{
+        background-color: var(--color-main--reverse);
+        border-color: var(--color-highlight);
+        color: var(--color-highlight);
+    }
+
+    .icon+.icon:hover{
+        background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
+    }
+}
+
+.gallery {
+    &__controls{
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+}

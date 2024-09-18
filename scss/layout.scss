@@ -70,6 +70,20 @@ a {
     background-color: var(--color-highlight--dark);
 }
 
+.icon {
+    width: 4em;
+    aspect-ratio: 1;
+    align-content: center;
+
+    border-radius: 50%;
+    border: 3px solid var(--color-background);
+
+    img{
+        width: 50%;
+        object-fit: contain;
+    }
+}
+
 form {
     $internal-horizontal-margin: 2em;
 

@@ -63,6 +63,19 @@ a {
   background-color: var(--color-highlight--dark);
 }
 
+.icon {
+  width: 4em;
+  aspect-ratio: 1;
+  align-content: center;
+  border-radius: 50%;
+  border: 3px solid var(--color-background);
+}
+.icon img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 form .col-100 {
   width: calc(100% - 2em);
   max-width: var(--max-width);

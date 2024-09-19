@@ -9,7 +9,7 @@ header nav {
   justify-content: space-between;
   padding: 1em 2em;
 }
-header nav > a {
+header .text-color--primary-dark {
   font-size: 1.5em;
   color: var(--color-primary--dark);
 }
@@ -23,56 +23,42 @@ header div a {
   margin: auto 10px;
 }
 
-@media screen and (min-width: 1200px) {
-  #landing {
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  #landing img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100%;
-  }
+.landing {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-#landing {
-  position: relative;
+.landing img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  margin: 0;
+  height: 100%;
 }
-#landing img {
-  width: 100%;
-}
-#landing div {
+.landing div {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  right: 0px;
   bottom: 0px;
-  margin: 4em 6em;
 }
-#landing h1 {
+@media screen and (min-width: 910px) {
+  .landing div {
+    right: 0px;
+    bottom: 0px;
+    padding: 4em 6em;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+.landing h1 {
   margin: 0 0 20px 0;
   color: var(--color-main-reverse);
 }
 
-#team > h3 {
-  margin: 0 3em;
-  max-width: var(--max-width);
-}
-@media screen and (min-width: 1200px) {
-  #team > h3 {
-    margin: 0 auto;
-  }
-}
-#team > div {
-  margin: 4em auto;
-}
-#team img {
+.team img {
   width: 10em;
   height: 10em;
   margin: 0 auto;
@@ -81,45 +67,27 @@ header div a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#team p {
-  margin: 0 auto;
-  max-width: 12em;
-  font-size: smaller;
+.team__portrait {
+  max-width: 11em;
+  align-self: center;
   color: var(--color-main--reverse--light);
 }
 
-#statistics .container {
-  margin: 4.5em 6em;
-}
-@media screen and (min-width: 1200px) {
-  #statistics .container {
-    margin: 4.5em auto;
-  }
-}
-#statistics h2 {
+.statistics h2 {
   margin: 0.25em auto;
 }
-#statistics p {
+.statistics p {
   margin: 0 auto;
   font-size: larger;
   font-weight: bolder;
 }
 
-#services .container {
-  margin: 4.5em 6em;
-}
-@media screen and (min-width: 1200px) {
-  #services .container {
-    margin: 4.5em auto;
-  }
-}
-#services div {
+.services div {
   margin: 0 auto;
 }
-#services h3 {
+.services h3 {
   font-size: x-large;
 }
-
 .services__rounded-background {
   width: 25vw;
   aspect-ratio: 1;
@@ -136,130 +104,116 @@ header div a {
      object-fit: contain;
 }
 
-#contact form {
-  margin-left: 6em;
-  margin-right: 6em;
-}
-@media screen and (min-width: 1200px) {
-  #contact form {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-#contact form .cta {
+.contact form .cta {
   margin-top: 2em;
   margin-right: 1em;
   margin-bottom: 6em;
   align-self: flex-end;
 }
 
-#about > .row {
-  justify-content: space-evenly;
-  margin: 3em 4em;
+.about > .row {
+  justify-content: space-between;
 }
-@media screen and (min-width: 1200px) {
-  #about > .row {
-    justify-content: space-between;
-    margin: 3em auto;
+.about .col-50 {
+  justify-content: space-evenly;
+  width: calc(50% - var(--margin-horizontal) / 4);
+}
+@media screen and (max-width: 910px) {
+  .about .col-50 {
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
-#about .border {
+.about .border {
   border-radius: 20px;
-  width: 40vw;
   box-sizing: border-box;
-  max-width: 500px;
 }
-#about .border__visible {
+.about .border__visible {
   border: 1px solid var(--color-background);
   padding: 1.5em;
 }
-#about img.border {
+.about img.border {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#about .highlight-icon {
+.about .highlight-icon {
   margin-top: 0.5em;
   justify-content: center;
   align-items: center;
 }
-#about .highlight-icon h4 {
+.about .highlight-icon h4 {
   color: var(--color-background);
   font-size: smaller;
 }
 
-#gallery > h3 {
-  margin: 0 3em;
-  max-width: var(--max-width);
-}
-@media screen and (min-width: 1200px) {
-  #gallery > h3 {
-    margin: 0 auto;
-  }
-}
-#gallery .container {
-  padding: 1em 6em;
-}
-#gallery img {
+.gallery img {
   margin-top: 1.2em;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 10px;
 }
-#gallery .icon {
+.gallery .icon {
   width: 2em;
   border-width: 2px;
 }
-#gallery .icon:hover {
+.gallery .prev:hover {
   background-color: hsl(from var(--color-main) h s calc(l - 10));
 }
-#gallery .icon + .icon {
+.gallery .next {
   background-color: var(--color-main--reverse);
   border-color: var(--color-highlight);
   color: var(--color-highlight);
 }
-#gallery .icon + .icon:hover {
+.gallery .next:hover {
   background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
 }
-
 .gallery__controls {
   justify-content: space-between;
   margin-bottom: 2em;
 }
 
-#general_info {
-  padding: 2em 6em;
+.general-info {
   text-align: left;
 }
-#general_info h3 {
+.general-info h3 {
   margin: auto auto 1em 0;
 }
-#general_info p {
+.general-info p {
   font-size: small;
   color: var(--color-main--dark);
   margin: auto 0;
 }
-#general_info div:has(> img) {
+.general-info div:has(> img) {
   margin-bottom: 1em;
 }
-#general_info img {
-  margin-right: 1.5em;
-  width: 1.3em;
+.general-info div:has(> img) img {
+  width: 1em;
+  margin-right: 1em;
+}
+@media screen and (max-width: 910px) {
+  .general-info .responsive-change {
+    flex-direction: row;
+  }
+  .general-info .responsive-change .row {
+    width: 50%;
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }
 
-#copy_sn {
-  padding: 2em 6em;
+.copy-sn {
   color: var(--color-main--dark);
 }
-#copy_sn p {
+.copy-sn p {
   text-align: left;
   font-size: smaller;
   flex-grow: 1;
 }
-#copy_sn > .row {
+.copy-sn > .row {
   align-items: center;
 }
-#copy_sn a {
+.copy-sn a {
   border: 1px solid var(--color-main--dark);
   border-radius: 7px;
   width: 1em;
@@ -268,10 +222,16 @@ header div a {
   padding: 0.33em;
   align-content: center;
 }
-#copy_sn img {
+.copy-sn img {
   filter: invert(1);
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 910px) {
+  .copy-sn .responsive-change {
+    justify-items: center;
+    flex-direction: column;
+  }
 }

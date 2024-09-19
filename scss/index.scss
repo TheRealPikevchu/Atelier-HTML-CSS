@@ -11,9 +11,8 @@ header {
         padding: 1em 2em;
     }
 
-    nav>a {
+    .text-color--primary-dark {
         font-size: 1.5em;
-        // ? Why less specific than .light-background a ?
         color: var(--color-primary--dark);
     }
 
@@ -32,59 +31,38 @@ header {
     }
 }
 
-// ? Posible to use --max-width instead of 1200px ?
-@media screen and (min-width: 1200px) {
-    #landing {
-        height: 100vh;
-        width: 100vw;
+.landing {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
 
-        // ? Why is this required ?
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: hidden;
-
-        img {
-            object-fit: cover;
-            height: 100%;
-        }
-    }
-}
-
-#landing {
-    position: relative;
-    width: 100%;
-    margin: 0;
-
-    // ? Why can't I do it like this ? (big size horizontal scroll)
-    // @media screen and (min-width: 1200px) {
-    //     height: 100vh;
-    //     width: 100vw;
-
-    //     // ? Why is this required ?
-    //     box-sizing: border-box;
-    //     overflow-x: hidden;
-    //     overflow-y: hidden;
-
-    //     img {
-    //         object-fit: cover;
-    //         height: 100%;
-    //     }
-    // }
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     img {
+        object-fit: cover;
         width: 100%;
+        height: 100%;
     }
 
     div {
         position: absolute;
+
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
 
-        right: 0px;
         bottom: 0px;
-        margin: 4em 6em;
+
+        @media screen and (min-width:910px) {
+            right: 0px;
+            bottom: 0px;
+            padding: 4em 6em;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
     }
 
     h1 {
@@ -93,22 +71,7 @@ header {
     }
 }
 
-#team {
-    &>h3 {
-        margin: 0 3em;
-        max-width: var(--max-width);
-    }
-
-    @media screen and (min-width: 1200px) {
-        &>h3 {
-            margin: 0 auto;
-        }
-    }
-
-    &>div {
-        margin: 4em auto;
-    }
-
+.team {
     img {
         width: 10em;
         height: 10em;
@@ -121,25 +84,14 @@ header {
         object-fit: cover;
     }
 
-    p {
-        margin: 0 auto;
-        max-width: 12em;
-        font-size: smaller;
+    &__portrait {
+        max-width: 11em;
+        align-self: center;
         color: var(--color-main--reverse--light);
     }
 }
 
-#statistics {
-    .container {
-        margin: 4.5em 6em;
-    }
-
-    @media screen and (min-width: 1200px) {
-        .container {
-            margin: 4.5em auto;
-        }
-    }
-
+.statistics {
     h2 {
         margin: 0.25em auto;
     }
@@ -152,17 +104,7 @@ header {
     }
 }
 
-#services {
-    .container {
-        margin: 4.5em 6em;
-    }
-
-    @media screen and (min-width: 1200px) {
-        .container {
-            margin: 4.5em auto;
-        }
-    }
-
+.services {
     div {
         margin: 0 auto;
     }
@@ -170,9 +112,7 @@ header {
     h3 {
         font-size: x-large;
     }
-}
 
-.services {
     &__rounded-background {
         width: 25vw;
         aspect-ratio: 1;
@@ -192,16 +132,8 @@ header {
     }
 }
 
-#contact {
+.contact {
     form {
-        margin-left: 6em;
-        margin-right: 6em;
-
-        @media screen and (min-width: 1200px) {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .cta {
             margin-top: 2em;
             margin-right: 1em;
@@ -211,24 +143,24 @@ header {
     }
 }
 
-#about {
+.about {
     &>.row {
-        justify-content: space-evenly;
-        margin: 3em 4em;
+        justify-content: space-between;
     }
 
-    @media screen and (min-width: 1200px) {
-        &>.row {
-            justify-content: space-between;
-            margin: 3em auto;
+    .col-50 {
+        justify-content: space-evenly;
+        width: calc(50% - var(--margin-horizontal) / 4);
+
+        @media screen and (max-width: 910px) {
+            width: 100%;
+            margin-bottom: 1em;
         }
     }
 
     .border {
         border-radius: 20px;
-        width: 40vw;
         box-sizing: border-box;
-        max-width: 500px;
 
         &__visible {
             border: 1px solid var(--color-background);
@@ -252,22 +184,7 @@ header {
     }
 }
 
-#gallery {
-    &>h3 {
-        margin: 0 3em;
-        max-width: var(--max-width);
-    }
-
-    @media screen and (min-width: 1200px) {
-        &>h3 {
-            margin: 0 auto;
-        }
-    }
-
-    .container {
-        padding: 1em 6em;
-    }
-
+.gallery {
     img {
         margin-top: 1.2em;
         width: 100%;
@@ -280,30 +197,27 @@ header {
         border-width: 2px;
     }
 
-    .icon:hover {
+    .prev:hover {
         background-color: hsl(from var(--color-main) h s calc(l - 10));
     }
 
-    .icon+.icon {
+    .next {
         background-color: var(--color-main--reverse);
         border-color: var(--color-highlight);
         color: var(--color-highlight);
     }
 
-    .icon+.icon:hover {
+    .next:hover {
         background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
     }
-}
 
-.gallery {
     &__controls {
         justify-content: space-between;
         margin-bottom: 2em;
     }
 }
 
-#general_info {
-    padding: 2em 6em;
+.general-info {
 
     text-align: left;
 
@@ -317,18 +231,29 @@ header {
         margin: auto 0;
     }
 
-    div:has(> img){
+    div:has(> img) {
         margin-bottom: 1em;
+
+        img {
+            width: 1em;
+            margin-right: 1em;
+        }
     }
 
-    img {
-        margin-right: 1.5em;
-        width: 1.3em;
+    @media screen and (max-width: 910px) {
+        .responsive-change {
+            flex-direction: row;
+
+            .row {
+                width: 50%;
+                justify-content: center;
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
-#copy_sn {
-    padding: 2em 6em;
+.copy-sn {
     color: var(--color-main--dark);
 
     p {
@@ -359,5 +284,12 @@ header {
         object-fit: contain;
         width: 100%;
         height: 100%;
+    }
+
+    @media screen and (max-width: 910px) {
+        .responsive-change {
+            justify-items: center;
+            flex-direction: column;
+        }
     }
 }

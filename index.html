@@ -14,63 +14,65 @@
     <header class="light-background">
         <nav>
             <a href="index.html" class="text-color--primary-dark poppins-black">
-                Agenc<i class="text-color--primary-dark poppins-black-italic">eco</i>
+                Agenc<i class="poppins-black-italic">eco</i>
             </a>
-            <div class="row">
+            <div class="row responsive-hidden">
                 <a href="#landing">Accueil</a>
                 <a href="#team">Notre équipe</a>
                 <a href="#services">Nos services</a>
                 <a href="#statistics">Témoignages</a>
                 <a href="#contact">Contactez-nous</a>
                 <a href="#gallery">Notre galerie</a>
-                </dov>
+            </div>
         </nav>
     </header>
     <main>
-        <section id="landing">
+        <section id="landing" class="landing">
             <img src="images/rodion-kutsaev-049M_crau5k-unsplash 1.jpg" alt="Feuilles">
             <div>
                 <h1>Bienvenue dans votre</h1>
                 <h1><em>agence web écologique</em></h1>
             </div>
         </section>
-        <section id="team" class="light-background">
+        <section id="team" class="team light-background">
             <h2>Notre équipe</h2>
-            <h3>Deserunt est adipisicing nisi magna irure sint aliqua aliquip consectetur adipisicing eiusmod aute qui
-                est. Culpa commodo veniam ad anim sint exercitation deserunt consequat.</h3>
+            <p class="description">Deserunt est adipisicing nisi magna irure sint aliqua aliquip consectetur adipisicing
+                eiusmod aute qui
+                est. Culpa commodo veniam ad anim sint exercitation deserunt consequat.</p>
             <div class="row container">
-                <div class="col-33 column">
+                <div class="col-33 column responsive-change">
                     <img src="images/image 1.jpg" alt="Profil de Julie Dupond">
                     <h3>Julie Dupond</h3>
-                    <p class="poppins-thin">Do tempor tempor ex pariatur do qui culpa aute fugiat.</p>
+                    <p class="team__portrait poppins-thin">Do tempor tempor ex pariatur do qui culpa aute fugiat.</p>
                 </div>
-                <div class="col-33 column">
+                <div class="col-33 column responsive-change">
                     <img src="images/image 2.jpg" alt="Profil de Roméo Sylla">
                     <h3>Roméo Sylla</h3>
-                    <p>Est occaecat do consequat qui aute culpa nostrud commodo.</p>
+                    <p class="team__portrait poppins-thin">Est occaecat do consequat qui aute culpa nostrud commodo.</p>
                 </div>
-                <div class="col-33 column">
+                <div class="col-33 column responsive-change">
                     <img src="images/image 3.jpg" alt="Profil de Javier Bardem">
                     <h3>Javier Bardem</h3>
-                    <p>Officia eu commodo occaecat officia eu incididunt amet labore nostrud aute.</p>
+                    <p class="team__portrait poppins-thin">Officia eu commodo occaecat officia eu incididunt amet labore
+                        nostrud aute.</p>
                 </div>
             </div>
         </section>
-        <section id="statistics">
+        <section id="statistics" class="statistics">
             <div class="row container">
-                <div class="col-25 column">
+                <div class="col-25 column responsive-change">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column">
+                <div class="col-25 column responsive-change">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column">
+                <div class="col-25 column responsive-change">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column">
+                <div class="col-25 column responsive-change">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
@@ -79,13 +81,13 @@
         <section id="services" class="services light-background">
             <h2>Nos services</h2>
             <div class="container row">
-                <div class="column">
+                <div class="column col-50">
                     <div class="services__rounded-background">
                         <img src="images/Vector-0-transparent.png" alt="Icône programme informatique">
                     </div>
                     <h3>Création de sites web</h3>
                 </div>
-                <div class="column">
+                <div class="column col-50">
                     <div class="services__rounded-background">
                         <img src="images/Vector-1-transparent.png" alt="Icône graphique décroissant">
                     </div>
@@ -93,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="contact">
             <h2>Contactez-nous</h2>
             <h3>Consequat minim ipsum eu aliquip irure aute est esse reprehenderit proident sunt occaecat.</h3>
             <form method="get" action="" class="container column">
@@ -127,13 +129,13 @@
                 <input type="submit" value="Envoyer" class="cta">
             </form>
         </section>
-        <section id="about" class="light-background">
+        <section id="about" class="about light-background">
             <div class="container row">
                 <img src="images/jason-goodman-Oalh2MojUuk-unsplash 1.jpg" alt="L'équipe Agenceco en réunion"
-                    class="col-50 border">
-                <div class="col-50 border border__visible">
+                    class="col-50 border responsive-change">
+                <div class="col-50 column border border__visible responsive-change">
                     <h3>A propos de nous</h3>
-                    <p>Veniam ex tempor in incididunt adipisicing aliqua veniam deserunt minim nisi eiusmod tempor.</p>
+                    <p>Veniam ex tempor in incididunt adipisicing aliqua veniam deserunt.</p>
                     <div class="row">
                         <div class="col-33 column highlight-icon">
                             <div class="icon">
@@ -160,62 +162,65 @@
                 </div>
             </div>
         </section>
-        <section id="gallery" class="light-background">
+        <section id="gallery" class="gallery light-background">
             <h2>Notre galerie</h2>
-            <h3>Nisi ex magna deserunt do incididunt dolor ipsum. Ex minim ullamco in incididunt deserunt anim duis nisi
+            <p class="description">Nisi ex magna deserunt do incididunt dolor ipsum. Ex minim ullamco in incididunt
+                deserunt anim duis nisi
                 sint reprehenderit nisi irure id sint. Aliqua enim dolor mollit dolor magna ad tempor do cillum pariatur
-                amet commodo ipsum deserunt. Non irure voluptate Lorem elit irure.</h3>
+                amet commodo ipsum deserunt. Non irure voluptate Lorem elit irure.</p>
             <div class="container">
                 <img src="images/kevin-bhagat-zNRITe8NPqY-unsplash 1.jpg"
                     alt="Photographie d'un smartphone, d'un ordinateur et d'une plante verte sur un bureau">
                 <div class="row gallery__controls">
-                    <span class="icon">&lt;</span>
-                    <span class="icon">&gt;</span>
+                    <span class="icon prev">&lt;</span>
+                    <span class="icon next">&gt;</span>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <section id="general_info" class="container row">
-            <div class="column col-20">
-                <h3>Contenus</h3>
-                <p>consectetur</p>
-                <p>adipiscing</p>
-            </div>
-            <div class="column col-20">
-                <h3>Informations</h3>
-                <p>consectetur</p>
-                <p>adipiscing</p>
-            </div>
-            <div class="column col-20">
-                <h3>Services</h3>
-                <p>consectetur</p>
-                <p>adipiscing</p>
-            </div>
-            <div class="column col-20">
-                <h3>Aide</h3>
-                <p>consectetur</p>
-                <p>adipiscing</p>
-            </div>
-            <div class="row col-20">
-                <div class="row">
-                    <img src="images/phone-call_5068703.svg" alt="Icone de téléphone">
-                    <div class="column">
-                        <p>+33 00 00 00 00 00</p>
-                        <p>+33 00 00 00 00 00</p>
-                    </div>
+        <section id="general-info" class="general-info">
+            <div class="container thin row">
+                <div class="column col-20 responsive-hidden">
+                    <h3>Contenus</h3>
+                    <p>consectetur</p>
+                    <p>adipiscing</p>
                 </div>
-                <div class="row">
-                    <img src="images/marker_3916874.svg" alt="Icone de localisation">
-                    <div class="column">
-                        <p>75001 Paris</p>
-                        <p>France</p>
+                <div class="column col-20 responsive-hidden">
+                    <h3>Informations</h3>
+                    <p>consectetur</p>
+                    <p>adipiscing</p>
+                </div>
+                <div class="column col-20 responsive-hidden">
+                    <h3>Services</h3>
+                    <p>consectetur</p>
+                    <p>adipiscing</p>
+                </div>
+                <div class="column col-20 responsive-hidden">
+                    <h3>Aide</h3>
+                    <p>consectetur</p>
+                    <p>adipiscing</p>
+                </div>
+                <div class="column col-20 responsive-change">
+                    <div class="row">
+                        <img src="images/phone-call_5068703.svg" alt="Icone de téléphone">
+                        <div class="column">
+                            <p>+33 0 00 00 00 00</p>
+                            <p>+33 0 00 00 00 00</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="images/marker_3916874.svg" alt="Icone de localisation">
+                        <div class="column">
+                            <p>75001 Paris</p>
+                            <p>France</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="copy_sn" class="dark-background">
-            <div class="container row ">
+        <section id="copy-sn" class="copy-sn dark-background">
+            <div class="container thin row responsive-change">
                 <p>Copyright &copy; 2021 AGENCECO - All rights reserved</p>
                 <div class="row">
                     <a href="https://www.facebook.com" target="_blank"><img src="images/104498_facebook_icon.svg"

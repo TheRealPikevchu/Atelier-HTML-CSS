@@ -268,36 +268,96 @@ header {
         padding: 1em 6em;
     }
 
-    img{
+    img {
         margin-top: 1.2em;
         width: 100%;
         object-fit: contain;
         border-radius: 10px;
     }
 
-    .icon{
+    .icon {
         width: 2em;
         border-width: 2px;
     }
 
-    .icon:hover{
+    .icon:hover {
         background-color: hsl(from var(--color-main) h s calc(l - 10));
     }
 
-    .icon+.icon{
+    .icon+.icon {
         background-color: var(--color-main--reverse);
         border-color: var(--color-highlight);
         color: var(--color-highlight);
     }
 
-    .icon+.icon:hover{
+    .icon+.icon:hover {
         background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
     }
 }
 
 .gallery {
-    &__controls{
+    &__controls {
         justify-content: space-between;
         margin-bottom: 2em;
+    }
+}
+
+#general_info {
+    padding: 2em 6em;
+
+    text-align: left;
+
+    h3 {
+        margin: auto auto 1em 0;
+    }
+
+    p {
+        font-size: small;
+        color: var(--color-main--dark);
+        margin: auto 0;
+    }
+
+    div:has(> img){
+        margin-bottom: 1em;
+    }
+
+    img {
+        margin-right: 1.5em;
+        width: 1.3em;
+    }
+}
+
+#copy_sn {
+    padding: 2em 6em;
+    color: var(--color-main--dark);
+
+    p {
+        text-align: left;
+        font-size: smaller;
+        flex-grow: 1;
+    }
+
+    >.row {
+        align-items: center;
+    }
+
+    a {
+        border: 1px solid var(--color-main--dark);
+        border-radius: 7px;
+
+        width: 1em;
+        height: 1em;
+
+        margin: 0 0.5em;
+        padding: 0.33em;
+
+        align-content: center;
+    }
+
+    img {
+        filter: invert(1);
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 }

@@ -18,8 +18,9 @@
   --color-main--reverse: var(--black);
   --color-background--reverse: var(--white);
   --color-primary--dark: hsl(from var(--color-primary) h s calc(l - 10));
-  --color-main--light: hsl(from var(--color-main) h s calc(l + 30));
+  --color-main--dark: hsl(from var(--color-main) h s calc(l - 10));
   --color-main--reverse--light: hsl(from var(--color-main--reverse) h s calc(l + 30));
+  --color-background--dark: hsl(from var(--color-background) h s calc(l - 5));
 }
 
 body {
@@ -30,6 +31,10 @@ body {
 .light-background {
   color: var(--color-main--reverse);
   background-color: var(--color-background--reverse);
+}
+
+.dark-background {
+  background-color: var(--color-background--dark);
 }
 
 .text-color--primary {

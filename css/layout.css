@@ -160,3 +160,7 @@ form label:has(+ textarea) {
 .col-25 {
   width: 25%;
 }
+
+.col-20 {
+  width: 20%;
+}

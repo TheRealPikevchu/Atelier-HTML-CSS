@@ -37,6 +37,16 @@ header div a {
      object-fit: cover;
   width: 100%;
   height: 100%;
+  filter: none;
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s, 0.75s;
+}
+.landing img:hover, .landing img:has(~ :hover) {
+  filter: blur(8px);
+}
+.landing img:hover ~ * h1, .landing img:has(~ :hover) ~ * h1 {
+  text-shadow: 4px 6px 10px #000;
 }
 .landing div {
   position: absolute;
@@ -56,6 +66,10 @@ header div a {
 .landing h1 {
   margin: 0 0 20px 0;
   color: var(--color-main-reverse);
+  text-shadow: 0 0 0 transparent;
+  transition-property: text-shadow;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s, 0.75s;
 }
 
 .team img {
@@ -205,10 +219,12 @@ header div a {
 .copy-sn {
   color: var(--color-main--dark);
 }
-.copy-sn p {
+.copy-sn h6 {
   text-align: left;
   font-size: smaller;
+  font-weight: lighter;
   flex-grow: 1;
+  margin: 0 auto;
 }
 .copy-sn > .row {
   align-items: center;

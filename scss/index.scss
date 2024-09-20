@@ -45,6 +45,22 @@ header {
         object-fit: cover;
         width: 100%;
         height: 100%;
+
+        filter: none;
+        transition-property: filter;
+        transition-timing-function: ease-in-out;
+        transition-duration: 1s, 0.75s;
+
+        &:hover,
+        &:has(~ :hover) {
+            filter: blur(8px);
+
+            ~* {
+                h1 {
+                    text-shadow: 4px 6px 10px #000;
+                }
+            }
+        }
     }
 
     div {
@@ -62,12 +78,16 @@ header {
             align-items: flex-end;
             justify-content: flex-end;
         }
-
     }
 
     h1 {
         margin: 0 0 20px 0;
         color: var(--color-main-reverse);
+
+        text-shadow: 0 0 0 transparent;
+        transition-property: text-shadow;
+        transition-timing-function: ease-in-out;
+        transition-duration: 1s, 0.75s;
     }
 }
 
@@ -256,10 +276,12 @@ header {
 .copy-sn {
     color: var(--color-main--dark);
 
-    p {
+    h6 {
         text-align: left;
         font-size: smaller;
+        font-weight: lighter;
         flex-grow: 1;
+        margin: 0 auto;
     }
 
     >.row {

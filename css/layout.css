@@ -69,6 +69,9 @@ a {
   color: var(--color-main);
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 .light-background a {
   color: var(--color-main--reverse);
@@ -97,7 +100,6 @@ p.description {
   border: 0 none transparent;
   outline: none;
 }
-
 .cta:hover {
   background-color: var(--color-highlight--dark);
 }

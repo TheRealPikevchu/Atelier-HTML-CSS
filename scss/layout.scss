@@ -76,6 +76,10 @@ em {
 a {
     color: var(--color-main);
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .light-background {
@@ -108,10 +112,10 @@ p.description {
     border-radius: 1.5em;
     border: 0 none transparent;
     outline: none;
-}
 
-.cta:hover {
-    background-color: var(--color-highlight--dark);
+    &:hover {
+        background-color: var(--color-highlight--dark);
+    }
 }
 
 .icon {

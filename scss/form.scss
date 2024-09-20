@@ -1,0 +1,65 @@
+
+form {
+    $internal-horizontal-margin: 2em;
+
+    margin-left: var(--margin-horizontal);
+    margin-right: var(--margin-horizontal);
+
+    .col-100 {
+        width: calc(100% - $internal-horizontal-margin);
+        max-width: var(--max-width);
+    }
+    
+    .col-50 {
+        width: calc(50% - $internal-horizontal-margin);
+    }
+    
+    @media screen and (min-width: 910px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form__element {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 0;
+
+        border-bottom: 3px solid var(--color-main);
+    }
+
+    .form__element:has(> :invalid:focus) {
+        border-bottom: 3px solid var(--color-invalid);
+    }
+
+    .form__element:has(> :valid:focus) {
+        border-bottom: 3px solid var(--color-highlight);
+    }
+
+    label {
+        font-size: smaller;
+        align-self: center;
+        text-align: left;
+        width: 5em;
+    }
+
+    input[type="tel"],
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        border: 0 none transparent;
+        outline: none;
+        background-color: var(--color-background);
+
+        font-family: "Poppins", sans-serif;
+        font-size: larger;
+        color: var(--color-main);
+
+        flex-grow: 1;
+    }
+
+    label:has(+ textarea) {
+        align-self: flex-start;
+    }
+}

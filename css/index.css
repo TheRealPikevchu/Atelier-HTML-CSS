@@ -40,13 +40,15 @@ header div a {
   filter: none;
   transition-property: filter;
   transition-timing-function: ease-in-out;
-  transition-duration: 1s, 0.75s;
+  transition-duration: 0.5s, 0.75s;
 }
-.landing img:hover, .landing img:has(~ :hover) {
-  filter: blur(8px);
-}
-.landing img:hover ~ * h1, .landing img:has(~ :hover) ~ * h1 {
-  text-shadow: 4px 6px 10px #000;
+@media screen and (min-width: 910px) {
+  .landing img:hover, .landing img:has(~ :hover) {
+    filter: blur(8px);
+  }
+  .landing img:hover ~ * h1, .landing img:has(~ :hover) ~ * h1 {
+    text-shadow: 4px 6px 10px #000;
+  }
 }
 .landing div {
   position: absolute;
@@ -69,7 +71,7 @@ header div a {
   text-shadow: 0 0 0 transparent;
   transition-property: text-shadow;
   transition-timing-function: ease-in-out;
-  transition-duration: 1s, 0.75s;
+  transition-duration: 0.5s, 0.75s;
 }
 
 .team img {
@@ -118,7 +120,7 @@ header div a {
      object-fit: contain;
 }
 
-.contact form .cta {
+.contact .cta {
   margin-top: 2em;
   margin-right: 1em;
   margin-bottom: 6em;
@@ -171,16 +173,24 @@ header div a {
   width: 2em;
   border-width: 2px;
 }
-.gallery .prev:hover {
+@media screen and (min-width: 910px) {
+  .gallery .prev:hover {
+    background-color: hsl(from var(--color-main) h s calc(l - 10));
+  }
+  .gallery .next:hover {
+    background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
+  }
+}
+.gallery .prev:active {
   background-color: hsl(from var(--color-main) h s calc(l - 10));
+}
+.gallery .next:active {
+  background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
 }
 .gallery .next {
   background-color: var(--color-main--reverse);
   border-color: var(--color-highlight);
   color: var(--color-highlight);
-}
-.gallery .next:hover {
-  background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
 }
 .gallery__controls {
   justify-content: space-between;

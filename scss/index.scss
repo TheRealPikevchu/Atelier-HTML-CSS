@@ -49,15 +49,18 @@ header {
         filter: none;
         transition-property: filter;
         transition-timing-function: ease-in-out;
-        transition-duration: 1s, 0.75s;
+        transition-duration: 0.5s, 0.75s;
 
-        &:hover,
-        &:has(~ :hover) {
-            filter: blur(8px);
+        @media screen and (min-width:910px) {
 
-            ~* {
-                h1 {
-                    text-shadow: 4px 6px 10px #000;
+            &:hover,
+            &:has(~ :hover) {
+                filter: blur(8px);
+
+                ~* {
+                    h1 {
+                        text-shadow: 4px 6px 10px #000;
+                    }
                 }
             }
         }
@@ -87,7 +90,7 @@ header {
         text-shadow: 0 0 0 transparent;
         transition-property: text-shadow;
         transition-timing-function: ease-in-out;
-        transition-duration: 1s, 0.75s;
+        transition-duration: 0.5s, 0.75s;
     }
 }
 
@@ -153,13 +156,11 @@ header {
 }
 
 .contact {
-    form {
-        .cta {
-            margin-top: 2em;
-            margin-right: 1em;
-            margin-bottom: 6em;
-            align-self: flex-end;
-        }
+    .cta {
+        margin-top: 2em;
+        margin-right: 1em;
+        margin-bottom: 6em;
+        align-self: flex-end;
     }
 }
 
@@ -217,18 +218,27 @@ header {
         border-width: 2px;
     }
 
-    .prev:hover {
+    @media screen and (min-width:910px) {
+        .prev:hover {
+            background-color: hsl(from var(--color-main) h s calc(l - 10));
+        }
+        .next:hover {
+            background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
+        }
+    }
+
+    .prev:active {
         background-color: hsl(from var(--color-main) h s calc(l - 10));
+    }
+
+    .next:active {
+        background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
     }
 
     .next {
         background-color: var(--color-main--reverse);
         border-color: var(--color-highlight);
         color: var(--color-highlight);
-    }
-
-    .next:hover {
-        background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
     }
 
     &__controls {
@@ -238,7 +248,6 @@ header {
 }
 
 .general-info {
-
     text-align: left;
 
     h3 {

@@ -49,7 +49,7 @@ A simple navigation menu, always displayed when navigating throught the page.
 The landing section of the website.
 Clicking on the landing section redirect to a [360 photo](https://balades360.simois.ch/vtour-FTU/tour.html).
 >[!NOTE]
->It always takes the full viewport to make an impressive landing experience.
+>It always takes the full viewport, to make an impressive landing experience.
 A transition effect is present when overing the section on large and medium devices, but is removed from small devices i.e. smartphone to prevent touch screen interactions issues.
 
 ### Team & Other sections
@@ -83,7 +83,7 @@ Index rely ond Style to retrieve common styling elements.
 
 ### Colors, Font and Form
 Those three files contains :
-- Colors : every color rules and the default swatch of the project
+- Colors : default color palette and rules
 - Font : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins)
 - Form : styling for forms
 

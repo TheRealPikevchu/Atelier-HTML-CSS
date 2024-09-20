@@ -90,7 +90,7 @@ Those three files contains :
 # Breakpoints
 The breakpoints used for this website are explained in the following diagram.
 
-![Break points diagram](https://github.com/TheRealPikevchu/Atelier-HTML-CSS/blob/master/drawings/breakpoints.png)
+![Break points diagram](https://github.com/TheRealPikevchu/Atelier-HTML-CSS/blob/master/drawings/breakpoints.drawio.png)
 
 The responsive design is based on width, with :
 - Under 910px : one column style presentation

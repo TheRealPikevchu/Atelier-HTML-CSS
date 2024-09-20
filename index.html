@@ -16,7 +16,23 @@
             <a href="index.html" class="text-color--primary-dark poppins-black">
                 Agenc<i class="poppins-black-italic">eco</i>
             </a>
-            <div class="row responsive-hidden">
+            <div class="burger-menu column responsive display">
+                <label for="burger-menu__toggle">
+                    <img src="images/Hamburger_icon.svg" alt="burger menu icon" class="burger-menu__open">
+                    <img src="images/cross-svgrepo-com.svg" alt="cross" class="burger-menu__close">
+                </label>
+                <!-- TODO : find a solution to remove duplication of list -->
+                <li class=".burger-menu__list">
+                    <menu><a href="#landing">Accueil</a></menu>
+                    <menu><a href="#team">Notre équipe</a></menu>
+                    <menu><a href="#services">Nos services</a></menu>
+                    <menu><a href="#statistics">Témoignages</a></menu>
+                    <menu><a href="#contact">Contactez-nous</a></menu>
+                    <menu><a href="#gallery">Notre galerie</a></menu>
+                </li>
+                <input type="checkbox" id="burger-menu__toggle" class="burger-menu__toggle visually-hidden">
+            </div>
+            <div class="burger-menu__content row responsive hidden">
                 <a href="#landing">Accueil</a>
                 <a href="#team">Notre équipe</a>
                 <a href="#services">Nos services</a>
@@ -42,17 +58,17 @@
                 eiusmod aute qui
                 est. Culpa commodo veniam ad anim sint exercitation deserunt consequat.</p>
             <div class="row container">
-                <div class="col-33 column responsive-change">
+                <div class="col-33 column responsive change">
                     <img src="images/image%201.jpg" alt="Profil de Julie Dupond">
                     <h3>Julie Dupond</h3>
                     <p class="team__portrait poppins-thin">Do tempor tempor ex pariatur do qui culpa aute fugiat.</p>
                 </div>
-                <div class="col-33 column responsive-change">
+                <div class="col-33 column responsive change">
                     <img src="images/image%202.jpg" alt="Profil de Roméo Sylla">
                     <h3>Roméo Sylla</h3>
                     <p class="team__portrait poppins-thin">Est occaecat do consequat qui aute culpa nostrud commodo.</p>
                 </div>
-                <div class="col-33 column responsive-change">
+                <div class="col-33 column responsive change">
                     <img src="images/image%203.jpg" alt="Profil de Javier Bardem">
                     <h3>Javier Bardem</h3>
                     <p class="team__portrait poppins-thin">Officia eu commodo occaecat officia eu incididunt amet labore
@@ -62,19 +78,19 @@
         </section>
         <section id="statistics" class="statistics">
             <div class="row container">
-                <div class="col-25 column responsive-change">
+                <div class="col-25 column responsive change">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column responsive-hidden">
+                <div class="col-25 column responsive hidden">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column responsive-hidden">
+                <div class="col-25 column responsive hidden">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
-                <div class="col-25 column responsive-hidden">
+                <div class="col-25 column responsive hidden">
                     <h2><em>2500</em></h2>
                     <p>Clients satisfaits</p>
                 </div>
@@ -102,29 +118,29 @@
             <h3>Consequat minim ipsum eu aliquip irure aute est esse reprehenderit proident sunt occaecat.</h3>
             <form method="get" action="#" class="container column">
                 <div class="row">
-                    <div class="col-50 form__element row responsive-change">
+                    <div class="col-50 form__element row responsive change">
                         <label for="name">Nom</label>
                         <input type="text" name="name" id="name" required>
                     </div>
-                    <div class="col-50 form__element row responsive-change">
+                    <div class="col-50 form__element row responsive change">
                         <label for="category">Catégorie</label>
                         <!-- TODO : try to turn this into dropdown -->
                         <input type="text" name="category" id="category">
                     </div>
-                    <div class="col-50 form__element row responsive-change">
+                    <div class="col-50 form__element row responsive change">
                         <label for="phone">Téléphone</label>
                         <input type="tel" name="phone" id="phone">
                     </div>
-                    <div class="col-50 form__element row responsive-change">
+                    <div class="col-50 form__element row responsive change">
                         <label for="location">Ville</label>
                         <input type="text" name="location" id="location">
                     </div>
                 </div>
-                <div class="col-100 form__element row responsive-change">
+                <div class="col-100 form__element row responsive change">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div class="col-100 form__element column responsive-change">
+                <div class="col-100 form__element column responsive change">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" rows="10" spellcheck="true" required></textarea>
                 </div>
@@ -134,8 +150,8 @@
         <section id="about" class="about light-background">
             <div class="container row">
                 <img src="images/jason-goodman-Oalh2MojUuk-unsplash%201.jpg" alt="L'équipe Agenceco en réunion"
-                    class="col-50 border responsive-change">
-                <div class="col-50 column border border__visible responsive-change">
+                    class="col-50 border responsive change">
+                <div class="col-50 column border border__visible responsive change">
                     <h3>A propos de nous</h3>
                     <p>Veniam ex tempor in incididunt adipisicing aliqua veniam deserunt.</p>
                     <div class="row">
@@ -183,27 +199,27 @@
     <footer>
         <section id="general-info" class="general-info">
             <div class="container thin row">
-                <div class="column col-20 responsive-hidden">
+                <div class="column col-20 responsive hidden">
                     <h3>Contenus</h3>
                     <p>consectetur</p>
                     <p>adipiscing</p>
                 </div>
-                <div class="column col-20 responsive-hidden">
+                <div class="column col-20 responsive hidden">
                     <h3>Informations</h3>
                     <p>consectetur</p>
                     <p>adipiscing</p>
                 </div>
-                <div class="column col-20 responsive-hidden">
+                <div class="column col-20 responsive hidden">
                     <h3>Services</h3>
                     <p>consectetur</p>
                     <p>adipiscing</p>
                 </div>
-                <div class="column col-20 responsive-hidden">
+                <div class="column col-20 responsive hidden">
                     <h3>Aide</h3>
                     <p>consectetur</p>
                     <p>adipiscing</p>
                 </div>
-                <div class="column col-20 responsive-change">
+                <div class="column col-20 responsive change">
                     <div class="row">
                         <img src="images/phone-call_5068703.svg" alt="Icone de téléphone">
                         <div class="column">
@@ -222,7 +238,7 @@
             </div>
         </section>
         <section id="copy-sn" class="copy-sn dark-background">
-            <div class="container thin row responsive-change">
+            <div class="container thin row responsive change">
                 <h6>Copyright &copy; 2021 AGENCECO - All rights reserved</h6>
                 <div class="row">
                     <a href="https://www.facebook.com" target="_blank"><img src="images/104498_facebook_icon.svg"

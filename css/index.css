@@ -4,6 +4,41 @@ header {
   z-index: 1;
   width: 100%;
 }
+header .burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+header .burger-menu__open {
+  width: 2em;
+  height: 2em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: inline;
+}
+header .burger-menu__close {
+  width: 2em;
+  height: 2em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: none;
+}
+header .burger-menu label:has(~ :checked) .burger-menu__open {
+  display: none;
+}
+header .burger-menu label:has(~ :checked) .burger-menu__close {
+  margin-right: 0;
+  display: inline;
+}
+header .burger-menu li {
+  display: none;
+}
+header .burger-menu li menu {
+  text-align: end;
+}
+header .burger-menu li:has(~ :checked) {
+  display: block;
+}
 header nav {
   display: flex;
   justify-content: space-between;
@@ -216,10 +251,10 @@ header div a {
   margin-right: 1em;
 }
 @media screen and (max-width: 910px) {
-  .general-info .responsive-change {
+  .general-info .responsive.change {
     flex-direction: row;
   }
-  .general-info .responsive-change .row {
+  .general-info .responsive.change .row {
     width: 50%;
     justify-content: center;
     margin-bottom: 0;
@@ -256,7 +291,7 @@ header div a {
   height: 100%;
 }
 @media screen and (max-width: 910px) {
-  .copy-sn .responsive-change {
+  .copy-sn .responsive.change {
     justify-items: center;
     flex-direction: column;
   }

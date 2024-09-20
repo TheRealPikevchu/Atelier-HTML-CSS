@@ -164,18 +164,37 @@ p.description {
 }
 
 @media screen and (max-width: 910px) {
-  .responsive-change.col-100,
-  .responsive-change.col-50,
-  .responsive-change.col-33,
-  .responsive-change.col-25,
-  .responsive-change.col-20 {
+  .responsive.change.col-100,
+  .responsive.change.col-50,
+  .responsive.change.col-33,
+  .responsive.change.col-25,
+  .responsive.change.col-20 {
     width: 100%;
   }
-  .responsive-hidden,
-  .responsive-hidden.row,
-  .responsive-hidden.row-reverse,
-  .responsive-hidden.column,
-  .responsive-hidden.column-reverse {
+  .responsive.hidden,
+  .responsive.hidden.row,
+  .responsive.hidden.row-reverse,
+  .responsive.hidden.column,
+  .responsive.hidden.column-reverse {
     display: none;
   }
+  .responsive.display,
+  .responsive.display.row,
+  .responsive.display.row-reverse,
+  .responsive.display.column,
+  .responsive.display.column-reverse {
+    display: inherit;
+  }
+}
+.display,
+.display.row,
+.display.row-reverse,
+.display.column,
+.display.column-reverse {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
 }

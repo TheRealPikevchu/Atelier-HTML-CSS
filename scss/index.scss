@@ -5,6 +5,49 @@ header {
     z-index: 1;
     width: 100%;
 
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        &__open {
+            width: 2em;
+            height: 2em;
+            object-fit: contain;
+            display: inline;
+        }
+
+        &__close {
+            width: 2em;
+            height: 2em;
+            object-fit: contain;
+            display: none;
+        }
+
+        label:has(~ :checked) {
+            .burger-menu__open{
+                display: none;
+            }
+
+            .burger-menu__close{
+                margin-right: 0;
+                display: inline;
+            }
+        }
+
+        li {
+            display: none;
+
+            menu {
+                text-align: end;
+            }
+        }
+
+        li:has(~ :checked){
+            display: block;
+        }
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -222,6 +265,7 @@ header {
         .prev:hover {
             background-color: hsl(from var(--color-main) h s calc(l - 10));
         }
+
         .next:hover {
             background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
         }
@@ -270,7 +314,7 @@ header {
     }
 
     @media screen and (max-width: 910px) {
-        .responsive-change {
+        .responsive.change {
             flex-direction: row;
 
             .row {
@@ -318,7 +362,7 @@ header {
     }
 
     @media screen and (max-width: 910px) {
-        .responsive-change {
+        .responsive.change {
             justify-items: center;
             flex-direction: column;
         }

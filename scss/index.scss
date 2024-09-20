@@ -25,11 +25,11 @@ header {
         }
 
         label:has(~ :checked) {
-            .burger-menu__open{
+            .burger-menu__open {
                 display: none;
             }
 
-            .burger-menu__close{
+            .burger-menu__close {
                 margin-right: 0;
                 display: inline;
             }
@@ -37,14 +37,19 @@ header {
 
         li {
             display: none;
+            // TODO : make the animation work
+            opacity: 0;
+            overflow-y: hidden;
+            transition: opacity 0.5s linear;
 
             menu {
                 text-align: end;
             }
-        }
 
-        li:has(~ :checked){
-            display: block;
+            &:has(~ :checked) {
+                display: block;
+                opacity:1;
+            }
         }
     }
 

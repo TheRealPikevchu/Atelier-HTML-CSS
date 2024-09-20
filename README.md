@@ -83,7 +83,7 @@ Index rely ond Style to retrieve common styling elements.
 
 ### Colors, Font and Form
 Those three files contains :
-- Colors : every color rules and the default swatch of the project
+- Colors : default color palette and rules
 - Font : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins)
 - Form : styling for forms
 

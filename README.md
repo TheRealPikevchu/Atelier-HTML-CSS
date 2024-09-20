@@ -87,5 +87,13 @@ Those three files contains :
 - Font : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins)
 - Form : styling for forms
 
+# Breakpoints
+The breakpoints used for this website are explained in the following diagram.
+![Break points diagram][https://github.com/TheRealPikevchu/Atelier-HTML-CSS/blob/master/drawings/breakpoints.png]
+The responsive design is based on width, with :
+- Under 910px : one column style presentation
+- Between 910px and 1200px : fixed margins to keep a visually compact style
+- Above 1200px : auto margins with core elements width fixed at 1200px
+
 # Deployment
 The final website [atelier-html-css.vercel.app](https://atelier-html-css.vercel.app/) is hosted and deployed using [vercel.com](https://vercel.com/).

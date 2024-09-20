@@ -86,3 +86,6 @@ Those three files contains :
 - Colors : every color rules and the default swatch of the project
 - Font : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins)
 - Form : styling for forms
+
+# Deployment
+The final website [atelier-html-css.vercel.app](https://atelier-html-css.vercel.app/) is hosted and deployed using [vercel.com](https://vercel.com/).

@@ -81,10 +81,10 @@ Index rely ond Style to retrieve common styling elements.
 ### Layout
 [Layout.scss](https://github.com/TheRealPikevchu/Atelier-HTML-CSS/blob/master/scss/layout.scss) contain all reusable layout elements that are proper to Agen*eco* style, including titles management, links, highlights, and flex layouts.
 
-### Colors, Font and Form
+### Colors, Text and Form
 Those three files contains :
 - Colors : default color palette and rules
-- Font : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins)
+- Text : integration of the font [Poppins](https://fonts.google.com/specimen/Poppins) and text related rules
 - Form : styling for forms
 
 # Breakpoints

@@ -48,3 +48,30 @@ body {
 .background--light {
   background-color: var(--white);
 }
+
+h1 {
+  color: var(--color-main);
+}
+
+h2 {
+  color: var(--color-secondary);
+}
+
+.light-background h2 {
+  color: var(--color-primary);
+}
+.light-background h2 a {
+  color: var(--color-main--reverse);
+}
+
+em {
+  color: var(--color-highlight);
+}
+
+a {
+  color: var(--color-main);
+}
+
+p.description {
+  color: var(--color-main--reverse);
+}

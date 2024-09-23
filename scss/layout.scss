@@ -13,6 +13,7 @@
     }
 }
 
+// General layout
 body {
     margin: 0;
 }
@@ -41,65 +42,7 @@ section {
     }
 }
 
-h1 {
-    font-size: 2em;
-    color: var(--color-main);
-
-    &>em {
-        font-size: 1.5em;
-        font-weight: 700;
-        font-style: normal;
-    }
-}
-
-h2 {
-    margin-top: 1.5em;
-    font-size: 2.5em;
-    color: var(--color-secondary);
-
-    &>em {
-        font-size: 1.2em;
-        font-weight: 700;
-        font-style: normal;
-    }
-}
-
-.light-background h2 {
-    color: var(--color-primary);
-}
-
-em {
-    color: var(--color-highlight);
-}
-
-a {
-    color: var(--color-main);
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.light-background {
-    a {
-        color: var(--color-main--reverse);
-    }
-}
-
-p.description {
-    margin: 0 var(--margin-horizontal);
-    max-width: var(--max-width);
-
-    font-size: large;
-    font-weight: bold;
-    color: var(--color-main--reverse);
-
-    @media screen and (min-width: 1200px) {
-        margin: 0 auto;
-    }
-}
-
+// Buttons and rounded icons
 .cta {
     font-weight: bold;
     color: var(--color-background);
@@ -131,6 +74,7 @@ p.description {
     }
 }
 
+// Columns and Rows
 .row,
 .row-reverse,
 .column,
@@ -185,6 +129,16 @@ p.description {
     width: 20%;
 }
 
+.display {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw
+}
+
+// Responsive behaviours
 @media screen and (max-width: 910px) {
 
     .responsive.change.col-100,
@@ -195,32 +149,19 @@ p.description {
         width: 100%;
     }
 
-    .responsive.hidden,
-    .responsive.hidden.row,
-    .responsive.hidden.row-reverse,
-    .responsive.hidden.column,
-    .responsive.hidden.column-reverse {
+    .responsive.hidden {
         display: none;
     }
 
-    .responsive.display,
-    .responsive.display.row,
-    .responsive.display.row-reverse,
-    .responsive.display.column,
-    .responsive.display.column-reverse {
+    .responsive.display {
         display: inherit;
     }
-}
 
-.display,
-.display.row,
-.display.row-reverse,
-.display.column,
-.display.column-reverse {
-    display: none;
-}
-
-.visually-hidden {
-    position: absolute;
-    left: -100vw
+    .responsive.switch.column {
+        flex-direction: row;
+    }
+    
+    .responsive.switch.row {
+        flex-direction: column;
+    }
 }

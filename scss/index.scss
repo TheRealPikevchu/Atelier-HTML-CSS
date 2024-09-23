@@ -1,13 +1,20 @@
-@import url(style.css);
-
 header {
     position: fixed;
     z-index: 1;
     width: 100%;
 
-    .burger-menu {
+    nav {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em 2em;
+
+        .text-color--primary-dark {
+            font-size: 1.5em;
+            color: var(--color-primary--dark);
+        }
+    }
+
+    .burger-menu {
         align-items: end;
 
         height: 2em;
@@ -15,6 +22,10 @@ header {
 
         &:has(> :checked) {
             height: 17em;
+
+            @media screen and (min-width: 910px) {
+                height: 0em;
+            }
         }
 
         &__open {
@@ -36,83 +47,47 @@ header {
 
             visibility: hidden;
         }
-
-        // ? WHY THIS NO WORK ?
-        // &__toggle:checked{
-        //     & ~ label .burger-menu__open{
-        //         visibility: hidden;
-        //     }
-
-        //     & ~ label .burger-menu__close{
-        //         visibility: visible;
-        //     }
-
-        //     & ~ ul {
-        //         display: block;
-        //         
-        //         menu > a {
-        //              color: var(--color-main--reverse);
-        //        }
-        //     }
-        // }
-
-        label:has(~ :checked) {
-            .burger-menu__open {
-                visibility: hidden;
-            }
-
-            .burger-menu__close {
-                visibility: visible;
-            }
-        }
-
+        
         ul {
-            display: none;
-            margin-top: 2.5em;
-
-            &:has(~:checked) {
-                display: block;
-
-                menu > a {
-                    color: var(--color-main--reverse);
-                }
-            }
+            flex-grow: 1;
+            justify-content: space-between;
+            padding: 0px;
+            margin: 0px;
 
             menu {
                 padding: 0;
+                margin: 0;
                 text-align: end;
 
-                & > a {
-                    // ? WHY TRANSITION NO WORKING ?
-                    color: rgba(from var(--color-main--reverse) r g b 0);
-                    transition: color 2s ease-in-out;
+                &>a {
+                    font-weight: bold;
+                    margin: auto 10px;
+
+                    color: var(--color-main--reverse)
                 }
             }
         }
-    }
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 1em 2em;
-    }
+        // Burger menu open behaviour
+        &__toggle:checked{
+            & ~ label .burger-menu__open{
+                visibility: hidden;
+            }
 
-    .text-color--primary-dark {
-        font-size: 1.5em;
-        color: var(--color-primary--dark);
-    }
+            & ~ label .burger-menu__close{
+                visibility: visible;
+            }
 
-    a {
-        font-weight: bold;
-    }
+            & ~ ul {
+                display: flex;
+                @media screen and (max-width: 910px) {
+                    margin-top: 2.5em;
+                }
 
-    div {
-        align-items: center;
-    }
-
-    div {
-        a {
-            margin: auto 10px;
+                menu > a {
+                     color: var(--color-main--reverse);
+               }
+            }
         }
     }
 }

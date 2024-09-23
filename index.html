@@ -6,6 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <script src='main.js'></script>
+    <link rel='stylesheet' media='screen' href='css/style.css'>
     <link rel='stylesheet' media='screen' href='css/index.css'>
     <title>Agenceco</title>
 </head>
@@ -16,13 +17,14 @@
             <a href="index.html" class="text-color--primary-dark poppins-black">
                 Agenc<i class="poppins-black-italic">eco</i>
             </a>
-            <div class="burger-menu column responsive display">
-                <label for="burger-menu__toggle">
-                    <img src="images/Hamburger_icon.svg" alt="burger menu icon" class="burger-menu__open">
+            <div class="burger-menu responsive switch row">
+                <input type="checkbox" id="burger-menu__toggle" class="burger-menu__toggle visually-hidden">
+                <label for="burger-menu__toggle" class="responsive display">
+                    <img src="images/Hamburger_icon.svg" alt="burger menu icon"
+                        class="burger-menu__open">
                     <img src="images/cross-svgrepo-com.svg" alt="cross" class="burger-menu__close">
                 </label>
-                <!-- TODO : find a solution to remove duplication of list -->
-                <ul class=".burger-menu__list">
+                <ul class=".burger-menu__list responsive switch row hidden">
                     <menu><a href="#landing">Accueil</a></menu>
                     <menu><a href="#team">Notre équipe</a></menu>
                     <menu><a href="#services">Nos services</a></menu>
@@ -30,15 +32,6 @@
                     <menu><a href="#contact">Contactez-nous</a></menu>
                     <menu><a href="#gallery">Notre galerie</a></menu>
                 </ul>
-                <input type="checkbox" id="burger-menu__toggle" class="burger-menu__toggle visually-hidden">
-            </div>
-            <div class="burger-menu__content row responsive hidden">
-                <a href="#landing">Accueil</a>
-                <a href="#team">Notre équipe</a>
-                <a href="#services">Nos services</a>
-                <a href="#statistics">Témoignages</a>
-                <a href="#contact">Contactez-nous</a>
-                <a href="#gallery">Notre galerie</a>
             </div>
         </nav>
     </header>

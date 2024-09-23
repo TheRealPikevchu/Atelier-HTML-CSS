@@ -8,40 +8,53 @@ header .burger-menu {
   display: flex;
   flex-direction: column;
   align-items: end;
+  height: 2em;
+  transition: height 0.05s linear;
+}
+header .burger-menu:has(> :checked) {
+  height: 17em;
 }
 header .burger-menu__open {
   width: 2em;
   height: 2em;
   -o-object-fit: contain;
      object-fit: contain;
-  display: inline;
+  position: absolute;
+  right: 2em;
+  visibility: visible;
 }
 header .burger-menu__close {
   width: 2em;
   height: 2em;
   -o-object-fit: contain;
      object-fit: contain;
-  display: none;
+  position: absolute;
+  right: 2em;
+  visibility: hidden;
 }
 header .burger-menu label:has(~ :checked) .burger-menu__open {
-  display: none;
+  visibility: hidden;
 }
 header .burger-menu label:has(~ :checked) .burger-menu__close {
-  margin-right: 0;
-  display: inline;
+  visibility: visible;
 }
-header .burger-menu li {
+header .burger-menu ul {
   display: none;
-  opacity: 0;
-  overflow-y: hidden;
-  transition: opacity 0.5s linear;
+  margin-top: 2.5em;
 }
-header .burger-menu li menu {
+header .burger-menu ul:has(~ :checked) {
+  display: block;
+}
+header .burger-menu ul:has(~ :checked) menu > a {
+  color: var(--color-main--reverse);
+}
+header .burger-menu ul menu {
+  padding: 0;
   text-align: end;
 }
-header .burger-menu li:has(~ :checked) {
-  display: block;
-  opacity: 1;
+header .burger-menu ul menu > a {
+  color: rgba(from var(--color-main--reverse) r g b 0);
+  transition: color 2s ease-in-out;
 }
 header nav {
   display: flex;

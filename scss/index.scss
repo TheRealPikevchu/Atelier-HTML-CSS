@@ -8,9 +8,8 @@ header {
         justify-content: space-between;
         padding: 1em 2em;
 
-        .text-color--primary-dark {
+        &>a {
             font-size: 1.5em;
-            color: var(--color-primary--dark);
         }
     }
 
@@ -28,26 +27,23 @@ header {
             }
         }
 
-        &__open {
-            width: 2em;
-            height: 2em;
-            object-fit: contain;
-            position: absolute;
-            right: 2em;
-
-            visibility: visible;
-        }
-
+        &__open,
         &__close {
             width: 2em;
             height: 2em;
             object-fit: contain;
             position: absolute;
             right: 2em;
+        }
 
+        &__open {
+            visibility: visible;
+        }
+
+        &__close {
             visibility: hidden;
         }
-        
+
         ul {
             flex-grow: 1;
             justify-content: space-between;
@@ -69,24 +65,21 @@ header {
         }
 
         // Burger menu open behaviour
-        &__toggle:checked{
-            & ~ label .burger-menu__open{
+        &__toggle:checked {
+            &~label .burger-menu__open {
                 visibility: hidden;
             }
 
-            & ~ label .burger-menu__close{
+            &~label .burger-menu__close {
                 visibility: visible;
             }
 
-            & ~ ul {
+            &~ul {
                 display: flex;
+
                 @media screen and (max-width: 910px) {
                     margin-top: 2.5em;
                 }
-
-                menu > a {
-                     color: var(--color-main--reverse);
-               }
             }
         }
     }

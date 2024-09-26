@@ -38,13 +38,13 @@ section .container.thin {
 
 .cta {
   font-weight: bold;
-  color: var(--color-background);
-  background-color: var(--color-highlight);
   min-width: 10em;
   min-height: 3em;
   border-radius: 1.5em;
   border: 0 none transparent;
   outline: none;
+  color: var(--color-background);
+  background-color: var(--color-highlight);
 }
 .cta:hover {
   background-color: var(--color-highlight--dark);

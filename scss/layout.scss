@@ -45,7 +45,7 @@ section {
 // Buttons and rounded icons
 .cta {
     font-weight: bold;
-    
+
     min-width: 10em;
     min-height: 3em;
     border-radius: 1.5em;
@@ -67,10 +67,24 @@ section {
 
     border-radius: 50%;
     border: 3px solid var(--color-background);
+    transition: border-color 0.05s ease-in-out;
+
+    background-color: var(--color-background--reverse);
+    transition: background-color 0.1s ease-in-out;
+
+    color: var(--color-background);
+    transition: color 0.05s ease-in-out;
 
     img {
         width: 50%;
         object-fit: contain;
+    }
+
+    &:hover,
+    &:active {
+        background-color: var(--color-main--reverse);
+        border-color: var(--color-highlight);
+        color: var(--color-highlight);
     }
 }
 
@@ -160,7 +174,7 @@ section {
     .responsive.switch.column {
         flex-direction: row;
     }
-    
+
     .responsive.switch.row {
         flex-direction: column;
     }

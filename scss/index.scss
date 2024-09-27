@@ -272,30 +272,6 @@ header {
         border-width: 2px;
     }
 
-    @media screen and (min-width:910px) {
-        .prev:hover {
-            background-color: hsl(from var(--color-main) h s calc(l - 10));
-        }
-
-        .next:hover {
-            background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
-        }
-    }
-
-    .prev:active {
-        background-color: hsl(from var(--color-main) h s calc(l - 10));
-    }
-
-    .next:active {
-        background-color: hsl(from var(--color-main--reverse) h s calc(l + 10));
-    }
-
-    .next {
-        background-color: var(--color-main--reverse);
-        border-color: var(--color-highlight);
-        color: var(--color-highlight);
-    }
-
     &__controls {
         justify-content: space-between;
         margin-bottom: 2em;
